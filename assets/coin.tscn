@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://nltubsko4ttc"]
+
+[ext_resource type="PackedScene" uid="uid://b5y7gipw0h24a" path="res://glb/stylized_coin.glb" id="1_1gdgx"]
+[ext_resource type="Script" path="res://scripts/coin.gd" id="2_pqxee"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_oober"]
+height = 0.259775
+radius = 0.437641
+
+[node name="stylized_coin" instance=ExtResource("1_1gdgx")]
+script = ExtResource("2_pqxee")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.0214081, 0.818459, -0.0150757)
+shape = SubResource("CylinderShape3D_oober")

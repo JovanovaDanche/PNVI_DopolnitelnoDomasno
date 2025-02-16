@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bwttfc5s5dpl0"]
+
+[ext_resource type="PackedScene" uid="uid://bdo7hjmy7s6rp" path="res://Merk%2C Gnome explorer.glb" id="1_4mcpg"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cvnvi"]
+
+[node name="Merk_2C Gnome explorer" instance=ExtResource("1_4mcpg")]
+transform = Transform3D(0.0811183, 0, -1.4978, 0, 1.5, 0, 1.4978, 0, 0.0811183, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="68"]
+shape = SubResource("BoxShape3D_cvnvi")

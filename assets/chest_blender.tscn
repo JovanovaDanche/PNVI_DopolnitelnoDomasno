@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://cnm0mw0i7hf2n"]
+
+[ext_resource type="PackedScene" uid="uid://c2ymvsso5mm2n" path="res://glb/chestBlender.glb" id="1_ffmb5"]
+[ext_resource type="Script" path="res://scripts/chest_blender.gd" id="2_c24j7"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0h0xn"]
+size = Vector3(1.2641, 1.14658, 1)
+
+[node name="chestBlender" instance=ExtResource("1_ffmb5")]
+script = ExtResource("2_c24j7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0104065, 0.6017, 0)
+shape = SubResource("BoxShape3D_0h0xn")
