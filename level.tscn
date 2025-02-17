@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://xcres5ejy5ij"]
+[gd_scene load_steps=33 format=3 uid="uid://xcres5ejy5ij"]
 
 [ext_resource type="Texture2D" uid="uid://chfouaj1dv6m3" path="res://Sky.png" id="1_345je"]
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_f3a4w"]
@@ -23,6 +23,8 @@
 [ext_resource type="Script" path="res://scripts/chest_counter.gd" id="18_vssgk"]
 [ext_resource type="Script" path="res://scripts/coin_counter.gd" id="19_k0c4k"]
 [ext_resource type="PackedScene" uid="uid://dvmc7askhy0eu" path="res://endScreen.tscn" id="23_n2w1e"]
+[ext_resource type="AudioStream" uid="uid://lbwf20cns4uj" path="res://sounds/time.wav" id="24_dwhcn"]
+[ext_resource type="AudioStream" uid="uid://dphci3xn0j2fs" path="res://sounds/collect.wav" id="25_21mmu"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_rdef4"]
 panorama = ExtResource("1_345je")
@@ -346,6 +348,12 @@ autostart = true
 
 [node name="EndScreen" parent="." instance=ExtResource("23_n2w1e")]
 visible = false
+
+[node name="AudioTimer" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("24_dwhcn")
+
+[node name="AudioTreasure" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("25_21mmu")
 
 [connection signal="coinCollected" from="Coins/coinHolder/stylized_coin" to="." method="_on_coin_collected"]
 [connection signal="coinCollected" from="Coins/coinHolder/stylized_coin" to="Control/CoinCounter" method="_on_coin_collected"]
